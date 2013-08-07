@@ -1,6 +1,6 @@
 {
     "name": "mauris/ini-writer",
-    "description": "",
+    "description": "A lightweight to write and dump configuration to INI format",
     "type": "library",
     "authors": [
         {
