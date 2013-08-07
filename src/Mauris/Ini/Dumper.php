@@ -3,5 +3,4 @@ namespace Mauris\Ini;
 
 class Dumper
 {
-
 }
