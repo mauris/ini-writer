@@ -1,4 +1,4 @@
 <?php
 
 $loader = require(__DIR__ . '/../vendor/autoload.php');
-$loader->add('Packfire\\Config\\', __DIR__);
+$loader->add('Mauris\\IniWriter\\', __DIR__);
