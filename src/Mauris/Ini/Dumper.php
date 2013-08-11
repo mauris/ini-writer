@@ -9,6 +9,7 @@ class Dumper
         foreach ($input as $section => $array) {
             $output .= self::writeSection($section, $array);
         }
+
         return $output;
     }
 
@@ -19,7 +20,7 @@ class Dumper
         foreach ($array as $key => $value) {
             if (is_array($value) || is_object($value)) {
                 $key = $section . '.' . $key;
-                $subsections[$key] = (array)$value;
+                $subsections[$key] = (array) $value;
             } else {
                 $output .= self::normalizeKey($key) . '=';
                 if (is_string($value)) {
@@ -33,12 +34,13 @@ class Dumper
             }
         }
 
-        if($subsections){
+        if ($subsections) {
             $output .= "\n";
             foreach ($subsections as $section => $array) {
                 $output .= self::writeSection($section, $array);
             }
         }
+
         return $output;
     }
 
