@@ -36,10 +36,12 @@ class Dumper
                 $output .= "\n";
             }
         }
-        $output .= "\n";
 
-        foreach ($subsections as $section => $array) {
-            $output .= self::writeSection($section, $array);
+        if($subsections){
+            $output .= "\n";
+            foreach ($subsections as $section => $array) {
+                $output .= self::writeSection($section, $array) . "\n";
+            }
         }
         return $output;
     }
